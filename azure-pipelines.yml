@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  name: ssb-devops-agent-app
+  name: Default
 
 steps:
 - task: Maven@3

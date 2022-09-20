@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  name: ubuntu-latest
+  name: ssb-devops-agent-app
 
 steps:
 - task: Maven@3

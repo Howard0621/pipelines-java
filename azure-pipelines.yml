@@ -15,11 +15,6 @@ steps:
     java -version
     echo $JAVA_HOME_8_X64
     echo JAVA_HOME=$JAVA_HOME
-- task: JavaToolInstaller@0
-  inputs:
-    versionSpec: '8'
-    jdkArchitectureOption: 'x64'
-    jdkSourceOption: 'PreInstalled'
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'

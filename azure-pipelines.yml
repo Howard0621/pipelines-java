@@ -13,6 +13,8 @@ steps:
 - script: |
     which java
     java -version
+    echo JAVA_HOME_8_x86=$JAVA_HOME_8_x86
+    echo JAVA_HOME=$JAVA_HOME
 - task: JavaToolInstaller@0
   inputs:
     versionSpec: '8'

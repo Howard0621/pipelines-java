@@ -10,7 +10,7 @@ pool:
   name: Default
 
 steps:
-- script: |
+- script: 
     which java
     java -version
     echo JAVA_HOME_8_X64=$JAVA_HOME_8_X64
@@ -25,6 +25,7 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
+
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '/home/rockwelladmin/myagent/_work/1/s/target/helloworld.war'

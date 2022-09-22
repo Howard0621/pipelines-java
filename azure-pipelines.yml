@@ -10,7 +10,7 @@ pool:
   name: Default
 
 steps:
-- script: 
+- script: |
     which java
     java -version
     echo JAVA_HOME_8_X64=$JAVA_HOME_8_X64

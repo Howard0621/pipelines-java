@@ -27,6 +27,6 @@ steps:
     goals: 'package'
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    PathtoPublish: '/home/rockwelladmin/myagent/_work/1/s/target'
     ArtifactName: 'helloworld'
     publishLocation: 'Container'

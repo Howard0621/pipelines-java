@@ -17,7 +17,7 @@ steps:
     jdkSourceOption: 'LocalDirectory'
     jdkFile: '/usr/local/jdk-8u202-linux-x64.tar.gz'
     jdkDestinationDirectory: '/usr/lib/jvm/java8202'
-    cleanDestinationDirectory: true
+    cleanDestinationDirectory: false
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'

@@ -32,7 +32,7 @@ steps:
   inputs:
     script: |
       echo Write your commands here
-      mvn deploy:deploy-file -DgroupId=helloworld -DartifactId=helloworld -Dversion=2.0 -Dpackaging=war -DrepositoryId=Feed-test -Dfile=/home/rockwelladmin/myagent/_work/1/s/target/helloworld.war -Durl=http://172.19.0.6/DefaultCollection/Auto-IOT-Chery/_packaging/Feed-test/maven/v1
+      mvn deploy:deploy-file -DgroupId=helloworld -DartifactId=helloworld -Dversion=1.0-SNAPSHOT -Dpackaging=war -DrepositoryId=Feed-test -Dfile=/home/rockwelladmin/myagent/_work/1/s/target/helloworld.war -Durl=http://172.19.0.6/DefaultCollection/Auto-IOT-Chery/_packaging/Feed-test/maven/v1
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '/home/rockwelladmin/myagent/_work/1/s/target/helloworld.war'

@@ -16,7 +16,17 @@ steps:
     echo JAVA_HOME_8_X64=$JAVA_HOME_8_X64
     echo JAVA_HOME=$JAVA_HOME
 
-
+- task: Maven@3
+  inputs:
+    mavenPomFile: 'pom.xml'
+    publishJUnitResults: true
+    testResultsFiles: '**/surefire-reports/TEST-*.xml'
+    javaHomeOption: 'JDKVersion'
+    mavenVersionOption: 'Default'
+    mavenAuthenticateFeed: false
+    effectivePomSkip: false
+    sonarQubeRunAnalysis: true
+    sqMavenPluginVersionChoice: 'latest'
 - task: CmdLine@2
   inputs:
     script: |

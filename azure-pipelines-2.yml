@@ -10,6 +10,9 @@ pool:
   name: default
 
 steps:
+- task: CmdLine@2
+  inputs:
+    script: 'mvn -v'
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'

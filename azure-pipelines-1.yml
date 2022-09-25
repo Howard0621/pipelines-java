@@ -22,6 +22,6 @@ steps:
     mavenDirectory: '/usr/share/apache-maven'
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    PathtoPublish: '/home/rockwelladmin/myagent/_work/5/s'
     ArtifactName: 'drop'
     publishLocation: 'Container'

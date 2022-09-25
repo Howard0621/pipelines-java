@@ -20,6 +20,10 @@ steps:
     goals: 'package'
     mavenSetM2Home: true
     mavenDirectory: '/usr/share/apache-maven'
+- task: CmdLine@2
+  inputs:
+    script: |
+      mvn deploy:deploy-file -DgroupId=helloworld -DartifactId=helloworld -Dversion=1.0-SNAPSHOT -Dpackaging=war -DrepositoryId=Feed-test -Dfile=/home/rockwelladmin/myagent/_work/5/s/target/helloworld.war -Durl=http://172.19.0.6/DefaultCollection/Auto-IOT-Chery/_packaging/Feed-test/maven/v1
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '/home/rockwelladmin/myagent/_work/5/s/target/helloworld.war'

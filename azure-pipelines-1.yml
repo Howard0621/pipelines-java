@@ -21,7 +21,7 @@ steps:
     effectivePomSkip: false
     sonarQubeRunAnalysis: true
     sqMavenPluginVersionChoice: 'latest'
-
+    findBugsRunAnalysis: true
 - task: CmdLine@2
   inputs:
     script: |

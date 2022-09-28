@@ -10,6 +10,7 @@ pool:
   name: default
 
 steps:
+
 - task: SonarQubePrepare@5
   inputs:
     SonarQube: 'AzureSonarSC'
@@ -19,6 +20,7 @@ steps:
       # Put one key=value per line, example:
       # sonar.exclusions=**/*.bin
       sonar.projectKey=TestSonarDemo
+- task: SonarQubeAnalyze@5
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
@@ -26,6 +28,9 @@ steps:
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     javaHomeOption: 'JDKVersion'
     mavenVersionOption: 'Default'
+- task: SonarQubePublish@5
+  inputs:
+    pollingTimeoutSec: '300'
 - task: CmdLine@2
   inputs:
     script: |

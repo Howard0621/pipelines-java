@@ -28,7 +28,6 @@ steps:
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     javaHomeOption: 'JDKVersion'
     mavenVersionOption: 'Default'
-    isJacocoCoverageReportXML: true
 - task: SonarQubePublish@5
   inputs:
     pollingTimeoutSec: '300'

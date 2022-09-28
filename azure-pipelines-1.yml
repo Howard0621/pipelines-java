@@ -10,6 +10,15 @@ pool:
   name: default
 
 steps:
+- task: SonarQubePrepare@5
+  inputs:
+    SonarQube: 'AzureSonarSC'
+    scannerMode: 'Other'
+    extraProperties: |
+      # Additional properties that will be passed to the scanner, 
+      # Put one key=value per line, example:
+      # sonar.exclusions=**/*.bin
+      sonar.projectKey=TestSonarDemo
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
